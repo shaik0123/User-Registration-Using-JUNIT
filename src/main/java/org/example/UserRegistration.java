@@ -30,8 +30,7 @@ public class UserRegistration {
     }
 
     public Boolean getEmail(String email) {
-
-        String emailRegex = "^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+(@)[a-z0-9]+[.][a-z]+[.]?[a-z]+$";
+        String emailRegex = "^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.][a-zA-Z]{2,4})([.][a-zA-Z]{2})*$";
         Pattern pattern = Pattern.compile(emailRegex);
 
         Matcher matcher = pattern.matcher(email);
@@ -53,7 +52,6 @@ public class UserRegistration {
 
     }
 
-    //Password Rule 1
     public Boolean getPasswordRule1(String passWord) {
 
         String passwordRegex = "^[A-Za-z]{8,}$";
@@ -65,7 +63,7 @@ public class UserRegistration {
         return result;
 
     }
-    //Password Rule 2
+
     public Boolean getPasswordRule2(String passWord) {
 
         String passwordRegex = "^(?=.*[A-Z])[a-z].{8,}$";
@@ -78,7 +76,6 @@ public class UserRegistration {
 
     }
 
-    //Password Rule 3
     public Boolean getPasswordRule3(String passWord) {
 
         String passwordRegex = "^(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{8,}$";
