@@ -92,7 +92,7 @@ public class UserRegistrationTest {
     public void check_Given_Password_Rule1_is_true_return_true(){
 
         UserRegistration password_Test = new UserRegistration();
-        Boolean result = password_Test.getPasswordRule1("ismail1234");
+        Boolean result = password_Test.getPassword("ismail1234");
         Assertions.assertTrue(result);
 
     }
@@ -102,7 +102,7 @@ public class UserRegistrationTest {
     public void check_Given_Password_Rule1_is_false_return_false(){
 
         UserRegistration password_Test = new UserRegistration();
-        Boolean result = password_Test.getPasswordRule1("ismail");
+        Boolean result = password_Test.getPassword("ismail");
         Assertions.assertFalse(result);
 
     }
@@ -112,7 +112,7 @@ public class UserRegistrationTest {
     public void check_Given_Password_Rule2_is_true_return_true(){
 
         UserRegistration password_Test = new UserRegistration();
-        Boolean result = password_Test.getPasswordRule2("Ismail1234");
+        Boolean result = password_Test.getPassword("Ismail1234");
         Assertions.assertTrue(result);
 
     }
@@ -122,7 +122,7 @@ public class UserRegistrationTest {
     public void check_Given_Password_Rule2_is_false_return_false(){
 
         UserRegistration password_Test = new UserRegistration();
-        Boolean result = password_Test.getPasswordRule2("ismail1234");
+        Boolean result = password_Test.getPassword("ismail1234");
         Assertions.assertFalse(result);
 
     }
@@ -132,7 +132,7 @@ public class UserRegistrationTest {
     public void check_Given_Password_Rule3_is_true_return_true(){
 
         UserRegistration password_Test = new UserRegistration();
-        Boolean result = password_Test.getPasswordRule3("Ismail1234");
+        Boolean result = password_Test.getPassword("Ismail1234");
         Assertions.assertTrue(result);
 
     }
@@ -142,7 +142,7 @@ public class UserRegistrationTest {
     public void check_Given_Password_Rule3_is_false_return_false(){
 
         UserRegistration password_Test = new UserRegistration();
-        Boolean result = password_Test.getPasswordRule3("Ismailshaik");
+        Boolean result = password_Test.getPassword("Ismailshaik");
         Assertions.assertFalse(result);
 
     }
@@ -152,7 +152,7 @@ public class UserRegistrationTest {
     public void check_Given_Password_Rule4_is_true_return_true(){
 
         UserRegistration password_Test = new UserRegistration();
-        Boolean result = password_Test.getPasswordRule4("Ismail@1234");
+        Boolean result = password_Test.getPassword("Ismail@1234");
         Assertions.assertTrue(result);
 
     }
@@ -162,7 +162,7 @@ public class UserRegistrationTest {
     public void check_Given_Password_Rule4_is_false_return_false(){
 
         UserRegistration password_Test = new UserRegistration();
-        Boolean result = password_Test.getPasswordRule4("ismail@1234");
+        Boolean result = password_Test.getPassword("ismail@1234");
         Assertions.assertFalse(result);
 
     }
